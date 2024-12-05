@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+.app.light {
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app.dark {
+  background-color: #333;
+  color: #f9f9f9;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.controls {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.game-board {
+  display: grid;
+  gap: 5px;
+  margin: 20px 0;
+}
+
+.three-by-three {
+  grid-template-columns: repeat(3, 60px);
+}
+
+.four-by-four {
+  grid-template-columns: repeat(4, 60px);
+}
+
+.tile {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  background-color: #ccc;
+  height: 60px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
+.tile.empty {
+  background-color: transparent;
+  cursor: default;
+}
+
+.stats {
+  margin-top: 20px;
+}
+
+.win-message {
+  background-color: #4caf50;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
 }
